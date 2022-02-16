@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import { PrimaryButton } from "../../styles/utils";
 
 const QuizCard = ({ imageUrl, imageAlt, name, description }) => {
+  const navigate = useNavigate();
   return (
     <Card>
       <ImageContainer>
@@ -10,9 +13,9 @@ const QuizCard = ({ imageUrl, imageAlt, name, description }) => {
       <DetailsContainer>
         <Title>{name}</Title>
         <Description>{description}</Description>
-        <QuizLink>
+        <PrimaryButton onClick={() => navigate("rules")}>
           Start Quiz <AiOutlineArrowRight />
-        </QuizLink>
+        </PrimaryButton>
       </DetailsContainer>
     </Card>
   );
@@ -45,14 +48,4 @@ const Title = styled.div`
 
 const Description = styled.div`
   color: ${(props) => props.theme.colors.sage11};
-`;
-
-const QuizLink = styled.button`
-  background-color: ${(props) => props.theme.colors.blue1};
-  padding: 0.5rem;
-  font-weight: 500;
-  color: ${(props) => props.theme.colors.blue11};
-  margin-top: 1rem;
-  border: 1px solid ${(props) => props.theme.colors.blue7};
-  border-radius: 0.5rem; ;
 `;
