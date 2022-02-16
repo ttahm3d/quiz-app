@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Container } from "../../styles/utils";
-import { FiSun, FiMenu, FiX, FiGithub } from "react-icons/fi";
+// import { NavLink } from "react-router-dom";
+// import { FiSun, FiMenu, FiX, FiGithub } from "react-icons/fi";
+import { FiSun } from "react-icons/fi";
 import { IoMdMoon } from "react-icons/io";
 
 const Header = ({ toggleTheme, theme }) => {
@@ -11,14 +13,14 @@ const Header = ({ toggleTheme, theme }) => {
         <Navbar>
           <Logo>Quiz App</Logo>
           <NavbarItems>
+            <NavList>
+              {/* <NavbarItem>Quizzes</NavbarItem>
+              <NavbarItem>Home</NavbarItem>
+              <NavbarItem>Leader Board</NavbarItem> */}
+            </NavList>
             <ThemeToggler onClick={toggleTheme}>
               {theme === "lightTheme" ? <IoMdMoon /> : <FiSun />}
             </ThemeToggler>
-            <NavList>
-              <NavbarItem>Quizzes</NavbarItem>
-              <NavbarItem>Home</NavbarItem>
-              <NavbarItem>Leader Board</NavbarItem>
-            </NavList>
           </NavbarItems>
         </Navbar>
       </Container>
@@ -28,7 +30,8 @@ const Header = ({ toggleTheme, theme }) => {
 
 const HeaderContainer = styled.header`
   padding: 1rem 0;
-  background-color: ${(props) => props.theme.colors.blue1};
+  background-color: ${(props) => props.theme.colors.sage1};
+  box-shadow: 0 0 4px ${(props) => props.theme.colors.sage6};
 `;
 
 const Navbar = styled.nav`
@@ -42,21 +45,31 @@ const NavbarItems = styled.div`
   justify-content: space-between;
 `;
 
-const NavbarItem = styled.li`
-  border-bottom: 2px solid transparent;
+// const NavbarItem = styled.li`
+//   border-bottom: 2px solid transparent;
 
-  &:hover {
-    border-bottom: 2px solid ${(props) => props.theme.colors.blue9};
-    transition: 0.3s all ease;
-  }
-`;
+//   &:hover {
+//     border-bottom: 2px solid ${(props) => props.theme.colors.blue9};
+//     transition: 0.3s all ease;
+//   }
+// `;
 
 const ThemeToggler = styled.button`
-  border: none;
   color: inherit;
   background-color: inherit;
   font-size: 1rem;
   cursor: pointer;
+  border: 1px solid ${(props) => props.theme.colors.sage7};
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.sage3};
+  }
+
+  &:active {
+    background-color: ${(props) => props.theme.colors.sage4};
+  }
 `;
 
 const NavList = styled.ul`
