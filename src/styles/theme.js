@@ -4,6 +4,8 @@ import {
   blue,
   red,
   green,
+  sage,
+  sageDark,
   grayDark,
   blueDark,
   redDark,
@@ -12,6 +14,7 @@ import {
 
 export const lightTheme = {
   colors: {
+    ...sage,
     ...gray,
     ...blue,
     ...red,
@@ -21,6 +24,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   colors: {
+    ...sageDark,
     ...grayDark,
     ...blueDark,
     ...redDark,
@@ -40,12 +44,24 @@ export const GlobalStyle = createGlobalStyle`
 
   }
 
+  img {
+    max-width: 100%;
+  }
+
+  input, button {
+    font-family: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
   body {
     margin: 0;
     font-family: var(--font-family-poppins);
-    background-color:  ${(props) => props.theme.colors.blue1};
+    background-color:  ${(props) => props.theme.colors.sage1};
     color: ${(props) => props.theme.colors.gray12}; 
-    /* transition: background 0.2s linear; */
     font-size: 1rem;
   }
 
