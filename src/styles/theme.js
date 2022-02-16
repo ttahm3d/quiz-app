@@ -19,6 +19,7 @@ export const lightTheme = {
     ...blue,
     ...red,
     ...green,
+    white: "#fbfbfb",
   },
 };
 
@@ -29,6 +30,7 @@ export const darkTheme = {
     ...blueDark,
     ...redDark,
     ...greenDark,
+    white: "#fbfbfb",
   },
 };
 
