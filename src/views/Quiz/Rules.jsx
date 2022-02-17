@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, FlexCenter, SecondaryButton } from "../../styles/utils";
+import { Container, FlexCenter } from "../../styles/utils";
 import styled from "styled-components";
 
 const Rules = () => {
@@ -34,9 +34,6 @@ const Rules = () => {
               perferendis earum?
             </li>
           </OrderedList>
-          <ButtonContainer>
-            <SecondaryButton>Start</SecondaryButton>
-          </ButtonContainer>
         </RulesWrapper>
       </FlexCenter>
     </Container>
@@ -66,7 +63,7 @@ const RulesWrapper = styled.div`
   }
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
+// const ButtonContainer = styled.div`
+//   display: flex;
+//   justify-content: flex-end;
+// `;

@@ -5,6 +5,8 @@ import {
   red,
   green,
   sage,
+  whiteA,
+  blackA,
   sageDark,
   grayDark,
   blueDark,
@@ -19,6 +21,8 @@ export const lightTheme = {
     ...blue,
     ...red,
     ...green,
+    ...whiteA,
+    ...blackA,
     white: "#fbfbfb",
   },
 };
@@ -30,6 +34,8 @@ export const darkTheme = {
     ...blueDark,
     ...redDark,
     ...greenDark,
+    ...whiteA,
+    ...blackA,
     white: "#fbfbfb",
   },
 };
